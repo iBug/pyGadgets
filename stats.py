@@ -28,7 +28,7 @@ class linreg:
 
     @staticmethod
     def a(x, y):
-        return avg(y) - b(x, y) * avg(x)
+        return avg(y) - linreg.b(x, y) * avg(x)
 
     @staticmethod
     def re(x, y):
