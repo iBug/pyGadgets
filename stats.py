@@ -12,7 +12,7 @@ def avg(l):
     except ZeroDivisionError:
         raise ValueError("The list cannot be empty")
 
-def stddev(l, a=None, unbiased=0):
+def stddev(l, a=None, unbiased=1):
     if a is None:
         a = avg(l)
     return sqrt(sum([(i-a)**2 for i in l]) / (len(l) - unbiased))
