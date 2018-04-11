@@ -1,10 +1,7 @@
 # Some statistics functions
 
-try:
-    sqrt = math.sqrt
-except NameError:
-    def sqrt(x):
-        return pow(x, 0.5)
+import math
+sqrt = math.sqrt
 
 def avg(l):
     try:
@@ -38,6 +35,12 @@ class linreg:
         n, ax, ay = len(x), avg(x), avg(y)
         return (sum([a * b for a, b in zip(x, y)]) - n * ax * ay) / pow((sum([i**2 for i in x]) - n * ax**2)*(sum([i**2 for i in y]) - n * ay**2), 0.5)
 
-def uncertainty(l, d, t=1.14, k=1, c=3):
+def uncertainty(l, d, t=1, k=1, c=3):
     """l: list, d: instrument precision"""
-    return sqrt((t * ubstddev(l) / sqrt(len(l)))**2 + (k * d / c)**2)
+    return sqrt(undertainty_a(l, t)**2 + undertainty_b(d, c, k)**2)
+
+def undertainty_a(l, t=1.0):
+    return t * ubstddev(l) / sqrt(len(l))
+
+def uncertainty_b(d, c=3.0, k=1.0):
+    return k * d / c;
