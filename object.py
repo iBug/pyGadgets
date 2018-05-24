@@ -4,13 +4,13 @@ class Object:
     """
 
     def __init__(self):
-        self.__dict__['data'] = dict()
+        self.__dict__['_Object__data'] = dict()
 
     def __getattr__(self, attr):
         try:
-            return self.data[attr]
+            return self.__data[attr]
         except KeyError:
             return None
 
     def __setattr__(self, attr, value):
-        self.data[attr] = value
+        self.__data[attr] = value
