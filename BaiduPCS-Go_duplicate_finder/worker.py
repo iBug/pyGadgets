@@ -36,7 +36,7 @@ print("Inflated size: {}".format(sum(k[0] * (len(seen[k]) - 1) for k in seen)))
 for key in seen:
     print("Duplicate: " + "\n           ".join(seen[key]))
 
-deleting = sum(seen[key][1:] for key in seen, start=[])
+deleting = sum((seen[key][1:] for key in seen), start=[])
 with open(deleter_name, "w", encoding=platform_encoding) as f:
     for i in range(deleting // GROUPING):
         part = deleting[i * GROUPING: (i + 1) * GROUPING]
