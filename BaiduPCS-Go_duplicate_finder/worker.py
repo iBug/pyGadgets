@@ -38,6 +38,6 @@ for key in seen:
 
 deleting = sum((seen[key][1:] for key in seen), [])
 with open(deleter_name, "w", encoding=platform_encoding) as f:
-    for i in range(deleting // GROUPING):
+    for i in range(len(deleting) // GROUPING):
         part = deleting[i * GROUPING: (i + 1) * GROUPING]
         print('BaiduPCS-Go rm ' + ' '.join('"{}"'.format(item) for item in part), file=f)
