@@ -5,7 +5,7 @@ import re
 
 GROUPING = 10  # Change this value to group files for "delete.sh"
 
-if "windows" in platform.platform():
+if "windows" in platform.platform().lower():
     platform_encoding = "gbk"
     deleter_name = "delete.bat"
 else:
