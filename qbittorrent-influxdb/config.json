@@ -1,0 +1,12 @@
+{
+  "influxdb": {
+    "host": "influxdb.example.com",
+    "port": 8086,
+    "username": "ibug",
+    "password": "my_password",
+    "database": "qb"
+  },
+  "qbittorrent": {
+    "url": "https://qb.example.com"
+  }
+}
