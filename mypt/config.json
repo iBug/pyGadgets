@@ -1,0 +1,12 @@
+{
+  "qbittorrent": {
+    "url": "https://qb.s.ibugone.com"
+  },
+  "byr": {
+    "username": "iBug",
+    "password": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "user-agent": "Mozilla/5.0 (iBug's BYR helper)",
+    "cookie": "auth_token=aaaaaaaa",
+    "passkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  }
+}

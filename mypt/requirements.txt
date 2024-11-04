@@ -1,0 +1,4 @@
+qbittorrent-api
+influxdb
+psutil
+humanize
